@@ -1,0 +1,129 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.view-container {
+  display: flex;
+  flex-direction: row;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.invoice-container {
+  border: 1px solid gray;
+  flex-basis: 55%;
+  width: 100%
+}
+.details-container {
+  border: 1px solid pink;
+  flex-basis: 45%;
+  width: 100%;
+  height: 100vh;
+  background: url('/static/svg/bg.svg') no-repeat;
+  background-size: contain;
+}
+
+.invoice-filter-container {
+  align-self: center;
+}
+
+.invoice-header {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.invoice-header h3 {
+  font-size: 28px;
+  font-weight: 500;
+  color: #0b5cff;
+}
+
+.invoice-filter {
+  width: 30px;
+  height: 7px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: url('/static/svg/filter.svg') no-repeat;
+  background-size: contain;
+}
+
+.invoice-list-container {
+  width: 90%;
+  height: 500px;
+  margin: 0 auto;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+}
+
+.invoice-list-container h5 {
+  margin: 0;
+  padding: 2% 0 2% 5%;
+  font-size: 18px;
+  font-weight: 500;
+  color: #797979;
+  border-bottom: 2px solid rgba(151, 151, 151, 0.09);
+}
+
+.invoice-list-sort-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0;
+  padding: 2% 5% 2% 5%;
+  font-size: 14px;
+  font-weight: 500;
+  color: #6a6a6a;
+  border-bottom: 1px solid rgba(151, 151, 151, 0.09);
+}
+
+.invoice-list-sort-header img {
+  width: 9px;
+  height: 4px;
+  object-fit: contain;
+  opacity: 0.58;
+  padding: 0 0 1.5px 7px;
+}
+
+.invoice-list-sort-item {
+  flex: 0 1 80px;
+}
+
+.invoice-list-sort-item:nth-child(2) {
+  flex: 0 1 180px;
+}
+
+.invoice-list-item-wrapper {
+  margin: 0;
+  padding: 0;
+}
+
+.invoice-list-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0;
+  padding: 2% 5% 2% 5%;
+  font-size: 14px;
+  color: #6a6a6a;
+  list-style: none;
+}
+
+.invoice-list-item span {
+  flex: 0 1 80px;
+}
+#just {
+  flex: 0 1 180px;
+}
+
+.maybeSolution {
+  width: 480px;
+  height: 600px;
+  background: url('/static/svg/Rectangle.png') no-repeat;
+  background-size: contain;
+  position: absolute;
+}

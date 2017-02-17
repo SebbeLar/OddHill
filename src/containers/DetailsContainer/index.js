@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import MenuButton from '../../components/MenuButton';
+import InvoiceDetails from '../../components/InvoiceDetails';
 
 class Details extends Component {
   render() {
@@ -9,6 +10,7 @@ class Details extends Component {
              srcSet="/static/svg/bg@2x.png, /static/svg/bg@3x.png"
              className="details-background" />
         <MenuButton />
+        <InvoiceDetails />
       </div>
     );
   }

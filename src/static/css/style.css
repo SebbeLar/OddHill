@@ -12,15 +12,17 @@ body {
 .invoice-container {
   border: 1px solid gray;
   flex-basis: 55%;
-  width: 100%
+  width: 100%;
+  height: 100vh;
 }
 .details-container {
+  position: relative;
   border: 1px solid pink;
   flex-basis: 45%;
   width: 100%;
   height: 100vh;
-  background: url('/static/svg/bg.svg') no-repeat;
-  background-size: contain;
+  /*background: url('/static/svg/bg.png') no-repeat;*/
+  /*background-size: cover;*/
 }
 
 .invoice-filter-container {
@@ -118,6 +120,28 @@ body {
 }
 #just {
   flex: 0 1 180px;
+}
+
+.details-background {
+  position: absolute;
+  width: 100%;
+  height:100%;
+  z-index: -1;
+}
+
+.details-menuButton {
+  width: 90px;
+  height: 90px;
+  border: none;
+  padding 0;
+  margin: 35px 35px 0 0;
+  float: right;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.27);
+}
+
+.details-menuButton-background {
+  width: 40px;
 }
 
 .maybeSolution {

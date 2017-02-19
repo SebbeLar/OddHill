@@ -1,20 +1,26 @@
 import React, { PropTypes } from 'react';
 
 const InvoiceListItem = (props) => {
+  const { type, account, status, currency, balance } = props.invoice;
   return (
     <li className="invoice-list-item">
-      <span>Checking</span>
-      <span id="just">{props.account}</span>
-      <span>Active</span>
-      <span>USD</span>
-      <span>$6,266.33</span>
+      <span>{type}</span>
+      <span id="just">{account}</span>
+      <span>{status}</span>
+      <span>{currency}</span>
+      <span>{balance}</span>
     </li>
   );
 };
 
 InvoiceListItem.propTypes = {
   props: PropTypes.object,
-  account: PropTypes.string
+  invoice: PropTypes.object,
+  type: PropTypes.string,
+  account: PropTypes.string,
+  status: PropTypes.string,
+  currency: PropTypes.string,
+  balance: PropTypes.string
 };
 
 export default InvoiceListItem;

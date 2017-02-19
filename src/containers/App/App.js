@@ -5,20 +5,20 @@ import Details from '../DetailsContainer';
 import Invoice from '../InvoiceContainer';
 import * as Actions from '../../actions';
 
-const App = ({ingredients, action}) => (
+const App = ({invoices, action}) => (
   <div className="view-container">
-    <Invoice />
+    <Invoice invoices={invoices}/>
     <Details />
   </div>
 );
 
 App.propTypes = {
-  ingredients: React.PropTypes.array,
+  invoices: React.PropTypes.array,
   action: React.PropTypes.object
 };
 
 const mapStateToProps = state => ({
-  ingredients: state.ingredients
+  invoices: state.invoices
 });
 
 const mapDispatchToProps = dispatch => ({

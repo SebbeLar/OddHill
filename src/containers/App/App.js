@@ -5,24 +5,26 @@ import Details from '../DetailsContainer';
 import Invoice from '../InvoiceContainer';
 import * as Actions from '../../actions';
 
-const App = ({invoices, action}) => (
+const App = ({invoices, activeInvoice, actions}) => (
   <div className="view-container">
-    <Invoice invoices={invoices}/>
-    <Details />
+    <Invoice invoices={invoices} actions={actions} activeInvoice={activeInvoice}/>
+    <Details invoices={invoices} activeInvoice={activeInvoice}/>
   </div>
 );
 
 App.propTypes = {
   invoices: React.PropTypes.array,
-  action: React.PropTypes.object
+  actions: React.PropTypes.object,
+  activeInvoice: React.PropTypes.string
 };
 
 const mapStateToProps = state => ({
-  invoices: state.invoices
+  invoices: state.invoices,
+  activeInvoice: state.activeInvoice
 });
 
 const mapDispatchToProps = dispatch => ({
-  action: bindActionCreators(Actions, dispatch)
+  actions: bindActionCreators(Actions, dispatch)
 });
 
 export default connect(

@@ -5,16 +5,23 @@ import InvoiceList from '../../components/InvoiceList';
 class Invoice extends Component {
   constructor(props) {
     super(props);
+
+    this.onInvoiceClick = this.onInvoiceClick.bind(this);
   }
   static propTypes = {
-    invoices: PropTypes.array
+    invoices: PropTypes.array,
+    actions: PropTypes.object,
+    toggleActiveInvoice: PropTypes.func
+  }
+  onInvoiceClick(invoice) {
+    this.props.actions.toggleActiveInvoice(invoice);
   }
   render() {
-    const { invoices } = this.props;
+    const { invoices, actions } = this.props;
     return (
       <div className="invoice-container">
         <InvoiceHeader />
-        <InvoiceList invoices={invoices}/>
+        <InvoiceList invoices={invoices} actions={actions} onInvoiceClick={this.onInvoiceClick}/>
       </div>
     );
   }

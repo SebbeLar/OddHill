@@ -8,7 +8,7 @@ import * as Actions from '../../actions';
 const App = ({invoices, activeInvoice, actions}) => (
   <div className="view-container">
     <Invoice invoices={invoices} actions={actions} activeInvoice={activeInvoice}/>
-    <Details invoices={invoices} activeInvoice={activeInvoice}/>
+    <Details invoices={invoices} activeInvoice={activeInvoice} actions={actions}/>
   </div>
 );
 

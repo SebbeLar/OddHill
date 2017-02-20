@@ -9,10 +9,11 @@ class Details extends Component {
   static propTypes = {
     props: PropTypes.object,
     invoices: PropTypes.array,
-    activeInvoice: PropTypes.number
+    activeInvoice: PropTypes.number,
+    actions: PropTypes.object
   }
   render() {
-    const { invoices, activeInvoice } = this.props;
+    const { invoices, activeInvoice, actions } = this.props;
     return (
       <div className="details-container">
         <img src="/static/svg/bg.png"
@@ -20,7 +21,7 @@ class Details extends Component {
              className="details-background" />
         <MenuButton />
         {activeInvoice > 0 &&
-        <InvoiceDetails invoices={invoices} activeInvoice={activeInvoice}/>
+        <InvoiceDetails invoices={invoices} activeInvoice={activeInvoice} actions={actions}/>
         }
       </div>
     );

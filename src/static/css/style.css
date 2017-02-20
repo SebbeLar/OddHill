@@ -163,14 +163,12 @@ html, body {
   margin: -10.5rem 0 0 -10.5rem;
   background-color: #ffffff;
   box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.5);
-  border: solid 1px #f9f9f9;
-  overflow: hidden;
 }
 
 .details-invoiceDetails-header {
-  width: 21.2rem;
-  height: 9.2rem;
-  margin: -.1rem 0 0 -.1rem;
+  width: 21rem;
+  height: 9rem;
+  /*margin: -.1rem 0 0 -.1rem;*/
 }
 
 .details-invoiceDetails-main {
@@ -202,10 +200,6 @@ html, body {
   margin-bottom: 14px;
 }
 
-.maybeSolution {
-  width: 480px;
-  height: 600px;
-  background: url('/static/svg/Rectangle.png') no-repeat;
-  background-size: contain;
-  position: absolute;
+.details-closeButton {
+  margin: 1.5rem 0 0 10rem;
 }

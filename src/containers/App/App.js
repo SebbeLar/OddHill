@@ -15,7 +15,7 @@ const App = ({invoices, activeInvoice, actions}) => (
 App.propTypes = {
   invoices: React.PropTypes.array,
   actions: React.PropTypes.object,
-  activeInvoice: React.PropTypes.string
+  activeInvoice: React.PropTypes.number
 };
 
 const mapStateToProps = state => ({

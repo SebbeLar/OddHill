@@ -1,10 +1,11 @@
 import React, { PropTypes } from 'react';
 
 const InvoiceListItem = (props) => {
-  const { type, account, status, currency, balance } = props.invoice;
-  const { onInvoiceClick } = props;
+  const { type, account, status, currency, balance, id } = props.invoice;
+  const { onInvoiceClick, activeInvoice } = props;
+  const classes = id === activeInvoice ? "invoice-list-item checked" : "invoice-list-item"
   return (
-    <li className="invoice-list-item" onClick={() => onInvoiceClick(account)}>
+    <li className={classes} onClick={() => onInvoiceClick(id)}>
       <span>{type}</span>
       <span id="just">{account}</span>
       <span>{status}</span>
@@ -22,7 +23,9 @@ InvoiceListItem.propTypes = {
   status: PropTypes.string,
   currency: PropTypes.string,
   balance: PropTypes.string,
-  onInvoiceClick: PropTypes.func
+  id: PropTypes.number,
+  onInvoiceClick: PropTypes.func,
+  activeInvoice: PropTypes.number
 };
 
 export default InvoiceListItem;

@@ -1,5 +1,5 @@
 import { TOGGLE_INVOICE } from '../constants/ActionTypes';
-const initialState = '';
+const initialState = 0;
 
 export default function activeInvoice(state = initialState, action) {
   switch (action.type) {

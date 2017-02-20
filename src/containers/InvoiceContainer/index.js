@@ -11,17 +11,21 @@ class Invoice extends Component {
   static propTypes = {
     invoices: PropTypes.array,
     actions: PropTypes.object,
-    toggleActiveInvoice: PropTypes.func
+    toggleActiveInvoice: PropTypes.func,
+    activeInvoice: PropTypes.number
   }
   onInvoiceClick(invoice) {
     this.props.actions.toggleActiveInvoice(invoice);
   }
   render() {
-    const { invoices, actions } = this.props;
+    const { invoices, actions, activeInvoice } = this.props;
     return (
       <div className="invoice-container">
         <InvoiceHeader />
-        <InvoiceList invoices={invoices} actions={actions} onInvoiceClick={this.onInvoiceClick}/>
+        <InvoiceList invoices={invoices}
+          actions={actions}
+          onInvoiceClick={this.onInvoiceClick}
+          activeInvoice={activeInvoice}/>
       </div>
     );
   }

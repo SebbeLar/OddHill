@@ -9,7 +9,7 @@ class Details extends Component {
   static propTypes = {
     props: PropTypes.object,
     invoices: PropTypes.array,
-    activeInvoice: PropTypes.string
+    activeInvoice: PropTypes.number
   }
   render() {
     const { invoices, activeInvoice } = this.props;
@@ -19,7 +19,7 @@ class Details extends Component {
              srcSet="/static/svg/bg@2x.png, /static/svg/bg@3x.png"
              className="details-background" />
         <MenuButton />
-        {activeInvoice.length > 0 &&
+        {activeInvoice > 0 &&
         <InvoiceDetails invoices={invoices} activeInvoice={activeInvoice}/>
         }
       </div>

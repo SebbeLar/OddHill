@@ -3,10 +3,10 @@ import InvoiceListSortHeader from './InvoiceListSortHeader';
 import InvoiceListItem from './InvoiceListItem';
 
 const InvoiceList = (props) => {
-  const { invoices, actions, onInvoiceClick } = props;
+  const { invoices, actions, onInvoiceClick, activeInvoice } = props;
   const invoiceListItems = invoices.map((invoice, index) => {
     return (
-      <InvoiceListItem invoice={invoice} key={index} onInvoiceClick={onInvoiceClick}/>
+      <InvoiceListItem invoice={invoice} key={index} onInvoiceClick={onInvoiceClick} activeInvoice={activeInvoice}/>
     );
   });
 
@@ -25,7 +25,8 @@ InvoiceList.propTypes = {
   invoices: PropTypes.array,
   invoice: PropTypes.object,
   actions: PropTypes.object,
-  onInvoiceClick: PropTypes.func
+  onInvoiceClick: PropTypes.func,
+  activeInvoice: PropTypes.number
 };
 
 export default InvoiceList;

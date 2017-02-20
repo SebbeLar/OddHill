@@ -4,7 +4,7 @@ import InvoiceDetailsMain from './InvoiceDetailsMain';
 const InvoiceDetails = (props) => {
   const { invoices, activeInvoice } = props;
   const invoice = invoices.filter((invoice) => {
-    return invoice.account === activeInvoice;
+    return invoice.id === activeInvoice;
   });
   return (
     <div className="details-invoiceDetails">

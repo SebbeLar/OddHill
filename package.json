@@ -1,6 +1,5 @@
 {
   "name": "OddHill",
-  },
   "version": "1.0.0",
   "description": "Test for OddHill application",
   "main": "index.js",

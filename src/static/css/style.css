@@ -17,14 +17,14 @@ html, body {
   flex-basis: 55%;
   width: 100%;
   height: 100vh;
+  box-shadow: 0 2px 44px 0 rgba(0, 0, 0, 0.4);
 }
 .details-container {
   position: relative;
   flex-basis: 45%;
   width: 100%;
   height: 100vh;
-  /*background: url('/static/svg/bg.png') no-repeat;*/
-  /*background-size: cover;*/
+  box-shadow: 0 2px 44px 0 rgba(0, 0, 0, 0.4);
 }
 
 .invoice-filter-container {
@@ -123,6 +123,7 @@ html, body {
 
 .invoice-list-item:hover {
   background-color: rgba(194, 194, 194, 0.09);
+  cursor: pointer;
 }
 
 .invoice-list-item span {
@@ -168,7 +169,6 @@ html, body {
 .details-invoiceDetails-header {
   width: 21rem;
   height: 9rem;
-  /*margin: -.1rem 0 0 -.1rem;*/
 }
 
 .details-invoiceDetails-main {
@@ -180,6 +180,7 @@ html, body {
   font-weight: bold;
   color: #0277ff;
 }
+
 .details-invoiceDetails-main-info {
   display: flex;
   flex-direction: row;
@@ -202,4 +203,8 @@ html, body {
 
 .details-closeButton {
   margin: 1.5rem 0 0 10rem;
+}
+
+.details-closeButton:hover {
+  cursor: pointer;
 }

@@ -4,10 +4,11 @@ const InvoiceListItem = (props) => {
   const { type, account, status, currency, balance, id } = props.invoice;
   const { onInvoiceClick, activeInvoice } = props;
   const classes = id === activeInvoice ? "invoice-list-item checked" : "invoice-list-item"
+
   return (
     <li className={classes} onClick={() => onInvoiceClick(id)}>
       <span>{type}</span>
-      <span id="just">{account}</span>
+      <span>{account}</span>
       <span>{status}</span>
       <span>{currency}</span>
       <span>{balance}</span>

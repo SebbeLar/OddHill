@@ -129,7 +129,8 @@ html, body {
 .invoice-list-item span {
   flex: 0 1 80px;
 }
-#just {
+
+.invoice-list-item span:nth-child(2) {
   flex: 0 1 180px;
 }
 

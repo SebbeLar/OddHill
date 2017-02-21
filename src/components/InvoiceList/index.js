@@ -4,6 +4,7 @@ import InvoiceListItem from './InvoiceListItem';
 
 const InvoiceList = (props) => {
   const { invoices, actions, onInvoiceClick, activeInvoice } = props;
+
   const invoiceListItems = invoices.map((invoice, index) => {
     return (
       <InvoiceListItem invoice={invoice} key={index} onInvoiceClick={onInvoiceClick} activeInvoice={activeInvoice}/>

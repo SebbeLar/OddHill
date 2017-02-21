@@ -1,6 +1,6 @@
-### OddHill Worksample ###
+# OddHill Worksample #
 
-###### Instructions ######
+#### Instructions ####
 
 1. `git clone https://github.com/SebbeLar/OddHill.git`
 2. `npm install`

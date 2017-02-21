@@ -100,6 +100,10 @@ html, body {
   flex: 0 1 180px;
 }
 
+.invoice-list-sort-item:hover {
+  cursor: pointer;
+}
+
 .invoice-list-item-wrapper {
   margin: 0;
   padding: 0;
